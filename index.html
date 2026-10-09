@@ -23,19 +23,18 @@
         }
     </script>
     <style>
-        /* Smooth transitions & animations */
         .fade-in {
-            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
         .touch-action-manipulation {
             touch-action: manipulation;
         }
 
-        /* Card floating and realistic shine effects */
+        /* 3D Target Card styles & shimmer FX */
         .card-shine {
             background: linear-gradient(115deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 45%, rgba(255,255,255,0.05) 55%, rgba(255,255,255,0.2) 100%);
         }
@@ -55,9 +54,9 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
             transform: rotate(30deg) translateX(-100%);
-            animation: shimmer 4s infinite ease-in-out;
+            animation: shimmer 3.5s infinite ease-in-out;
         }
         @keyframes shimmer {
             0% { transform: rotate(30deg) translateX(-100%); }
@@ -66,15 +65,12 @@
         }
     </style>
 </head>
-<body class="bg-slate-900/5 bg-[#F8FAFC] text-slate-900 font-sans min-h-screen flex flex-col justify-between items-center px-4 py-8 md:py-14 selection:bg-red-100 selection:text-targetRed relative overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col justify-between items-center px-4 py-8 md:py-12 selection:bg-red-100 selection:text-targetRed relative overflow-x-hidden">
 
-    <!-- Ambient Background Graphic Glows -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-to-b from-red-100/60 via-red-50/20 to-transparent blur-3xl -z-10 pointer-events-none"></div>
     <div class="absolute top-24 left-1/2 -translate-x-1/2 w-[340px] h-[340px] bg-red-400/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
-    <!-- Header Section -->
     <header class="w-full max-w-lg text-center space-y-3 mb-6 relative">
-        <!-- Top Pill Tag -->
         <div class="inline-block">
             <span class="inline-flex items-center gap-1.5 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-targetRed bg-red-50/90 border border-red-200/60 rounded-full shadow-sm backdrop-blur-md">
                 <span class="w-2 h-2 rounded-full bg-targetRed animate-pulse"></span>
@@ -82,7 +78,6 @@
             </span>
         </div>
 
-        <!-- Main Headline -->
         <h1 class="text-3xl sm:text-4xl md:text-[42px] font-black tracking-tight text-slate-900 leading-tight">
             Target <span class="text-targetRed bg-clip-text text-transparent bg-gradient-to-r from-targetRed to-red-600">$500 Gift Card</span>
         </h1>
@@ -91,16 +86,13 @@
         </p>
     </header>
 
-    <!-- Main Card Container -->
     <main class="w-full max-w-[460px] bg-white/95 backdrop-blur-xl rounded-[28px] shadow-2xl shadow-slate-300/50 border border-slate-200/80 overflow-hidden relative">
         
-        <!-- Enhanced Target Red Digital Card Graphic -->
+        <!-- Enhanced Target Digital Card Graphic -->
         <div class="p-6 pb-2 text-center relative overflow-hidden flex flex-col items-center justify-center">
-            
-            <!-- Graphic Plastic Gift Card Container -->
             <div class="w-full h-48 sm:h-52 bg-gradient-to-br from-red-600 via-targetRed to-red-800 rounded-2xl card-shadow card-shine relative p-5 flex flex-col justify-between text-white overflow-hidden border border-red-400/30 transition-transform duration-300 hover:scale-[1.01]">
                 
-                <!-- Card Background Patterns -->
+                <!-- Card Background SVG Patterns -->
                 <div class="absolute -right-10 -bottom-10 opacity-20 pointer-events-none">
                     <svg width="220" height="220" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="46" stroke="white" stroke-width="12" fill="none"/>
@@ -119,7 +111,7 @@
                 <!-- Top Card Header Row -->
                 <div class="flex justify-between items-center relative z-10">
                     <div class="flex items-center gap-2">
-                        <!-- Target Official Bullseye Logo SVG -->
+                        <!-- Target Bullseye Logo -->
                         <div class="w-8 h-8 rounded-full bg-white p-1 flex items-center justify-center shadow-md">
                             <svg class="w-full h-full text-targetRed fill-current" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="48" fill="currentColor"/>
@@ -158,8 +150,19 @@
             </div>
         </div>
 
-        <!-- Quiz Section -->
-        <div id="quiz-section" class="p-6 sm:p-7 border-b border-slate-100 bg-slate-50/70">
+        <div id="start-section" class="p-6 sm:p-7 text-center space-y-5 fade-in">
+            <div class="space-y-1.5">
+                <p class="text-xs font-extrabold uppercase tracking-wider text-targetRed">EVALUATION REQUIRED</p>
+                <h2 class="text-xl font-bold text-slate-900">Claim Your $500 Target Reward</h2>
+                <p class="text-xs text-slate-500 max-w-xs mx-auto">Complete a short 30-second evaluation quiz to verify your eligibility.</p>
+            </div>
+
+            <button onclick="startQuiz()" class="btn-shimmer w-full text-center bg-gradient-to-r from-targetRed via-red-600 to-targetRed hover:from-targetRedDark hover:to-targetRedDark text-white font-black text-base py-4 px-6 rounded-2xl shadow-xl shadow-red-600/30 hover:shadow-red-600/40 active:scale-[0.98] transition-all duration-200 uppercase tracking-wider touch-action-manipulation border border-red-500/30">
+                GET STARTED NOW
+            </button>
+        </div>
+
+        <div id="quiz-section" class="hidden p-6 sm:p-7 border-b border-slate-100 bg-slate-50/70">
             <div class="flex justify-between items-center text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">
                 <span class="flex items-center gap-1">
                     <svg class="w-3.5 h-3.5 text-targetRed" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -168,7 +171,7 @@
                 <span id="quiz-step-text" class="text-targetRed font-extrabold bg-red-50 px-2 py-0.5 rounded-md border border-red-100">Step 1 of 3</span>
             </div>
             
-            <!-- Minimal Progress Bar -->
+            <!-- Progress Bar -->
             <div class="w-full bg-slate-200/80 rounded-full h-1.5 mb-4 overflow-hidden">
                 <div id="quiz-progress" class="bg-gradient-to-r from-targetRed to-red-500 h-1.5 rounded-full transition-all duration-300 w-1/3"></div>
             </div>
@@ -211,14 +214,24 @@
             </div>
         </div>
 
-        <!-- How To Claim Section -->
-        <div class="p-6 sm:p-7 space-y-6">
+        <div id="claim-section" class="hidden p-6 sm:p-7 space-y-6 fade-in">
+            <!-- Eligibility Confirmation Badge -->
+            <div class="bg-emerald-50 border border-emerald-200/80 rounded-2xl p-3.5 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
+                    ✓
+                </div>
+                <div>
+                    <p class="text-xs font-extrabold text-emerald-800 uppercase tracking-wider">ELIGIBILITY CONFIRMED</p>
+                    <p class="text-xs text-emerald-700 font-medium">Follow the 4 steps below to receive your card.</p>
+                </div>
+            </div>
+
             <h2 class="text-[11px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
                 <span>HOW TO CLAIM</span>
                 <span class="flex-grow h-[1px] bg-slate-100"></span>
             </h2>
 
-            <!-- Steps List -->
+            <!-- 4 Claiming Steps -->
             <div class="space-y-4">
                 <!-- Step 1 -->
                 <div class="flex items-start gap-3.5 group">
@@ -268,17 +281,16 @@
                 </div>
             </div>
 
-            <!-- Primary CTA Button -->
+            <!-- Primary Continue CTA Button -->
             <div class="pt-2">
                 <a href="https://giftclick.org/aff_c?offer_id=3844&aff_id=165890" 
                    target="_blank" 
                    rel="noopener noreferrer"
                    class="btn-shimmer block w-full text-center bg-gradient-to-r from-targetRed via-red-600 to-targetRed hover:from-targetRedDark hover:to-targetRedDark text-white font-black text-base py-4 px-6 rounded-2xl shadow-xl shadow-red-600/30 hover:shadow-red-600/40 active:scale-[0.98] transition-all duration-200 uppercase tracking-wider touch-action-manipulation border border-red-500/30">
-                    GET STARTED NOW
+                    CONTINUE
                 </a>
             </div>
 
-            <!-- Security Trust Badges -->
             <div class="flex items-center justify-center gap-4 pt-1 text-[10px] text-slate-400 font-semibold">
                 <span class="flex items-center gap-1">
                     <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -298,7 +310,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="w-full max-w-lg text-center mt-8 space-y-2 text-[11px] text-slate-400">
         <p>&copy; 2026 Rewards US Program. All rights reserved.</p>
         <div class="flex justify-center items-center gap-3 text-slate-400 font-medium">
@@ -308,8 +319,12 @@
         </div>
     </footer>
 
-    <!-- Quiz Navigation Script -->
     <script>
+        function startQuiz() {
+            document.getElementById('start-section').classList.add('hidden');
+            document.getElementById('quiz-section').classList.remove('hidden');
+        }
+
         function nextQuestion(step) {
             document.querySelectorAll('.quiz-question').forEach(q => q.classList.add('hidden'));
 
@@ -329,18 +344,9 @@
             document.getElementById('quiz-loading').classList.remove('hidden');
 
             setTimeout(() => {
-                document.getElementById('quiz-loading').classList.add('hidden');
-                const content = document.getElementById('quiz-content');
-                content.innerHTML = `
-                    <div class="text-center py-2 space-y-1 fade-in">
-                        <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 text-sm font-bold mb-1">
-                            ✓
-                        </div>
-                        <p class="text-sm font-bold text-slate-900">Eligibility Confirmed!</p>
-                        <p class="text-xs text-slate-500">Please review the 4 steps below to claim your card.</p>
-                    </div>
-                `;
-            }, 800);
+                document.getElementById('quiz-section').classList.add('hidden');
+                document.getElementById('claim-section').classList.remove('hidden');
+            }, 900);
         }
     </script>
 </body>
