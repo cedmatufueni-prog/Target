@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target $500 Gift Card Opportunity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        targetRed: '#CC0000',
+                        targetRedDark: '#A80000',
+                        targetBlack: '#111111'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth transitions & animations */
+        .fade-in {
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .touch-action-manipulation {
+            touch-action: manipulation;
+        }
+
+        /* Card floating and realistic shine effects */
+        .card-shine {
+            background: linear-gradient(115deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 45%, rgba(255,255,255,0.05) 55%, rgba(255,255,255,0.2) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 20px 35px -10px rgba(204, 0, 0, 0.35), 0 10px 15px -10px rgba(0,0,0,0.1);
+        }
+
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            transform: rotate(30deg) translateX(-100%);
+            animation: shimmer 4s infinite ease-in-out;
+        }
+        @keyframes shimmer {
+            0% { transform: rotate(30deg) translateX(-100%); }
+            20% { transform: rotate(30deg) translateX(100%); }
+            100% { transform: rotate(30deg) translateX(100%); }
+        }
+    </style>
+</head>
+<body class="bg-slate-900/5 bg-[#F8FAFC] text-slate-900 font-sans min-h-screen flex flex-col justify-between items-center px-4 py-8 md:py-14 selection:bg-red-100 selection:text-targetRed relative overflow-x-hidden">
+
+    <!-- Ambient Background Graphic Glows -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-to-b from-red-100/60 via-red-50/20 to-transparent blur-3xl -z-10 pointer-events-none"></div>
+    <div class="absolute top-24 left-1/2 -translate-x-1/2 w-[340px] h-[340px] bg-red-400/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+    <!-- Header Section -->
+    <header class="w-full max-w-lg text-center space-y-3 mb-6 relative">
+        <!-- Top Pill Tag -->
+        <div class="inline-block">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-targetRed bg-red-50/90 border border-red-200/60 rounded-full shadow-sm backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-targetRed animate-pulse"></span>
+                EXCLUSIVE REWARD OPPORTUNITY
+            </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-4xl md:text-[42px] font-black tracking-tight text-slate-900 leading-tight">
+            Target <span class="text-targetRed bg-clip-text text-transparent bg-gradient-to-r from-targetRed to-red-600">$500 Gift Card</span>
+        </h1>
+        <p class="text-slate-500 text-sm sm:text-base font-medium max-w-md mx-auto leading-relaxed">
+            Follow the requirements below to claim your rewards card today.
+        </p>
+    </header>
+
+    <!-- Main Card Container -->
+    <main class="w-full max-w-[460px] bg-white/95 backdrop-blur-xl rounded-[28px] shadow-2xl shadow-slate-300/50 border border-slate-200/80 overflow-hidden relative">
+        
+        <!-- Enhanced Target Red Digital Card Graphic -->
+        <div class="p-6 pb-2 text-center relative overflow-hidden flex flex-col items-center justify-center">
+            
+            <!-- Graphic Plastic Gift Card Container -->
+            <div class="w-full h-48 sm:h-52 bg-gradient-to-br from-red-600 via-targetRed to-red-800 rounded-2xl card-shadow card-shine relative p-5 flex flex-col justify-between text-white overflow-hidden border border-red-400/30 transition-transform duration-300 hover:scale-[1.01]">
+                
+                <!-- Card Background Patterns -->
+                <div class="absolute -right-10 -bottom-10 opacity-20 pointer-events-none">
+                    <svg width="220" height="220" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="46" stroke="white" stroke-width="12" fill="none"/>
+                        <circle cx="50" cy="50" r="28" stroke="white" stroke-width="12" fill="none"/>
+                        <circle cx="50" cy="50" r="10" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="absolute -left-12 -top-12 opacity-10 pointer-events-none">
+                    <svg width="180" height="180" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" stroke="white" stroke-width="14" fill="none"/>
+                        <circle cx="50" cy="50" r="20" stroke="white" stroke-width="14" fill="none"/>
+                    </svg>
+                </div>
+
+                <!-- Top Card Header Row -->
+                <div class="flex justify-between items-center relative z-10">
+                    <div class="flex items-center gap-2">
+                        <!-- Target Official Bullseye Logo SVG -->
+                        <div class="w-8 h-8 rounded-full bg-white p-1 flex items-center justify-center shadow-md">
+                            <svg class="w-full h-full text-targetRed fill-current" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="currentColor"/>
+                                <circle cx="50" cy="50" r="32" fill="white"/>
+                                <circle cx="50" cy="50" r="16" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="font-black tracking-widest text-xs uppercase text-white drop-shadow">TARGET</span>
+                    </div>
+
+                    <span class="text-[10px] font-bold tracking-widest uppercase bg-black/20 border border-white/20 px-2.5 py-1 rounded-full backdrop-blur-md">
+                        REWARD CARD
+                    </span>
+                </div>
+
+                <!-- Center Value Display -->
+                <div class="my-auto relative z-10 text-left">
+                    <p class="text-[10px] uppercase font-bold tracking-widest text-red-100/80">BALANCE VALUE</p>
+                    <div class="text-4xl sm:text-5xl font-black tracking-tight drop-shadow-md text-white flex items-baseline gap-1">
+                        $500 <span class="text-sm font-bold text-red-200">USD</span>
+                    </div>
+                </div>
+
+                <!-- Bottom Card Footer Bar -->
+                <div class="flex justify-between items-end relative z-10">
+                    <div class="text-left">
+                        <p class="text-[8px] font-mono tracking-widest text-red-200/80 uppercase">CARD NUMBER</p>
+                        <p class="text-xs font-mono tracking-widest text-white/90">•••• •••• •••• 5000</p>
+                    </div>
+
+                    <!-- Holographic Security Chip Icon -->
+                    <div class="w-9 h-6 rounded bg-gradient-to-tr from-amber-200 via-yellow-400 to-amber-500 opacity-90 border border-yellow-200/50 flex items-center justify-center shadow-inner">
+                        <div class="w-full h-[1px] bg-amber-700/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="p-6 sm:p-7 border-b border-slate-100 bg-slate-50/70">
+            <div class="flex justify-between items-center text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <span class="flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-targetRed" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Quick Evaluation
+                </span>
+                <span id="quiz-step-text" class="text-targetRed font-extrabold bg-red-50 px-2 py-0.5 rounded-md border border-red-100">Step 1 of 3</span>
+            </div>
+            
+            <!-- Minimal Progress Bar -->
+            <div class="w-full bg-slate-200/80 rounded-full h-1.5 mb-4 overflow-hidden">
+                <div id="quiz-progress" class="bg-gradient-to-r from-targetRed to-red-500 h-1.5 rounded-full transition-all duration-300 w-1/3"></div>
+            </div>
+
+            <!-- Quiz Questions Box -->
+            <div id="quiz-content" class="min-h-[140px] flex flex-col justify-center">
+                <!-- Question 1 -->
+                <div id="q1" class="quiz-question space-y-3 fade-in">
+                    <p class="text-sm font-bold text-slate-800">1. How often do you shop at Target?</p>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="nextQuestion(2)" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">Weekly</button>
+                        <button onclick="nextQuestion(2)" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">Monthly</button>
+                        <button onclick="nextQuestion(2)" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:bg-red-50 hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">Seldom</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div id="q2" class="quiz-question space-y-3 hidden fade-in">
+                    <p class="text-sm font-bold text-slate-800">2. What is your primary shopping method?</p>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button onclick="nextQuestion(3)" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">In-Store</button>
+                        <button onclick="nextQuestion(3)" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">Online / App</button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div id="q3" class="quiz-question space-y-3 hidden fade-in">
+                    <p class="text-sm font-bold text-slate-800">3. Are you a US resident 18 or older?</p>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button onclick="finishQuiz()" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">Yes, I am 18+</button>
+                        <button onclick="finishQuiz()" class="py-2.5 px-3 bg-white border border-slate-200/90 hover:border-targetRed hover:text-targetRed rounded-xl text-xs font-bold text-slate-700 transition active:scale-[0.98] shadow-sm hover:shadow">No</button>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div id="quiz-loading" class="hidden text-center py-4 space-y-2 fade-in">
+                    <div class="inline-block animate-spin rounded-full h-7 w-7 border-3 border-slate-200 border-t-targetRed"></div>
+                    <p class="text-xs text-slate-500 font-semibold">Checking reward eligibility...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How To Claim Section -->
+        <div class="p-6 sm:p-7 space-y-6">
+            <h2 class="text-[11px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                <span>HOW TO CLAIM</span>
+                <span class="flex-grow h-[1px] bg-slate-100"></span>
+            </h2>
+
+            <!-- Steps List -->
+            <div class="space-y-4">
+                <!-- Step 1 -->
+                <div class="flex items-start gap-3.5 group">
+                    <div class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 group-hover:bg-red-50 group-hover:text-targetRed group-hover:border-red-200 text-slate-600 font-extrabold text-xs flex items-center justify-center border border-slate-200/80 transition-colors mt-0.5 shadow-sm">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm leading-tight">Click on the button below</h3>
+                        <p class="text-xs text-slate-500 font-medium mt-0.5">Access the official portal to begin.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-3.5 group">
+                    <div class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 group-hover:bg-red-50 group-hover:text-targetRed group-hover:border-red-200 text-slate-600 font-extrabold text-xs flex items-center justify-center border border-slate-200/80 transition-colors mt-0.5 shadow-sm">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm leading-tight">Enter your email & basic info</h3>
+                        <p class="text-xs text-slate-500 font-medium mt-0.5">Provide accurate details for verification.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-3.5 group">
+                    <div class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 group-hover:bg-red-50 group-hover:text-targetRed group-hover:border-red-200 text-slate-600 font-extrabold text-xs flex items-center justify-center border border-slate-200/80 transition-colors mt-0.5 shadow-sm">
+                        3
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <h3 class="font-bold text-slate-900 text-sm leading-tight">Complete 3-5 deals</h3>
+                            <span class="bg-red-100 text-targetRed text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded border border-red-200">Required</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium mt-0.5">Must finish the specified number of deals.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start gap-3.5 group">
+                    <div class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 group-hover:bg-red-50 group-hover:text-targetRed group-hover:border-red-200 text-slate-600 font-extrabold text-xs flex items-center justify-center border border-slate-200/80 transition-colors mt-0.5 shadow-sm">
+                        4
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm leading-tight">Claim your reward</h3>
+                        <p class="text-xs text-slate-500 font-medium mt-0.5">Receive your $500 gift card via email.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="pt-2">
+                <a href="https://giftclick.org/aff_c?offer_id=3844&aff_id=165890" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-shimmer block w-full text-center bg-gradient-to-r from-targetRed via-red-600 to-targetRed hover:from-targetRedDark hover:to-targetRedDark text-white font-black text-base py-4 px-6 rounded-2xl shadow-xl shadow-red-600/30 hover:shadow-red-600/40 active:scale-[0.98] transition-all duration-200 uppercase tracking-wider touch-action-manipulation border border-red-500/30">
+                    GET STARTED NOW
+                </a>
+            </div>
+
+            <!-- Security Trust Badges -->
+            <div class="flex items-center justify-center gap-4 pt-1 text-[10px] text-slate-400 font-semibold">
+                <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    256-Bit SSL Encrypted
+                </span>
+                <span>•</span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Verified Offer
+                </span>
+            </div>
+
+            <!-- Disclaimer Text -->
+            <p class="text-[10px] text-slate-400 text-center leading-normal max-w-xs mx-auto">
+                Subject to terms and conditions. Must be 18+ and a US resident. Reward issued upon completion of required tasks. This site is not affiliated with or endorsed by Target.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-lg text-center mt-8 space-y-2 text-[11px] text-slate-400">
+        <p>&copy; 2026 Rewards US Program. All rights reserved.</p>
+        <div class="flex justify-center items-center gap-3 text-slate-400 font-medium">
+            <a href="#" class="hover:underline hover:text-slate-600">Privacy Policy</a>
+            <span>&bull;</span>
+            <a href="#" class="hover:underline hover:text-slate-600">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- Quiz Navigation Script -->
+    <script>
+        function nextQuestion(step) {
+            document.querySelectorAll('.quiz-question').forEach(q => q.classList.add('hidden'));
+
+            if (step === 2) {
+                document.getElementById('q2').classList.remove('hidden');
+                document.getElementById('quiz-step-text').innerText = 'Step 2 of 3';
+                document.getElementById('quiz-progress').style.width = '66%';
+            } else if (step === 3) {
+                document.getElementById('q3').classList.remove('hidden');
+                document.getElementById('quiz-step-text').innerText = 'Step 3 of 3';
+                document.getElementById('quiz-progress').style.width = '100%';
+            }
+        }
+
+        function finishQuiz() {
+            document.querySelectorAll('.quiz-question').forEach(q => q.classList.add('hidden'));
+            document.getElementById('quiz-loading').classList.remove('hidden');
+
+            setTimeout(() => {
+                document.getElementById('quiz-loading').classList.add('hidden');
+                const content = document.getElementById('quiz-content');
+                content.innerHTML = `
+                    <div class="text-center py-2 space-y-1 fade-in">
+                        <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 text-sm font-bold mb-1">
+                            ✓
+                        </div>
+                        <p class="text-sm font-bold text-slate-900">Eligibility Confirmed!</p>
+                        <p class="text-xs text-slate-500">Please review the 4 steps below to claim your card.</p>
+                    </div>
+                `;
+            }, 800);
+        }
+    </script>
+</body>
+</html>
